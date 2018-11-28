@@ -16,25 +16,30 @@ void setY(double newy)
 {
   y = newy;
 }
-double getX()
+double getX() const
 {
   return x;
 }
-double getY()
+double getY()  const
 {
   return y;
 }
 };
-class three_d{
+class three_d : public two_d{
 private:
   double z;
 public:
   three_d()                  {    z=0;   }
 
   three_d(double a)          {   z=a;    }
+
+  double getZ()              {   return z;        }
 };
 int main()
 {
   three_d obj1;
+  cout<<obj1.getX();
+  cout<<obj1.getY();
+  cout<<obj1.getZ();
   return 0;
 }
